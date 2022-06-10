@@ -50,6 +50,7 @@ public class Shooter : MonoBehaviour
                     else
                     {
                         var preMuz = Instantiate(preMuzzle, firePoint.position, Quaternion.identity) as GameObject;
+                        Destroy(preMuz, 2);
                         timePre = time+1; //valor ao calhas
 
                     }
