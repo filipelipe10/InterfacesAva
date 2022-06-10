@@ -672,7 +672,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 1.18
     m_Space: 2147483647
   m_Property:
     name: _Fresnel_power
@@ -880,7 +880,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.04061505198478699,"g":0.12264150381088257,"b":0.0,"a":1.0}'
+      m_SerializableObject: '{"r":0.32258057594299319,"g":1.0,"b":0.0,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: _Fresnel_secondary_color
@@ -1046,7 +1046,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 10
+      m_SerializableObject: 9.98
     m_Space: 2147483647
   m_Property:
     name: _Voronoi_speed

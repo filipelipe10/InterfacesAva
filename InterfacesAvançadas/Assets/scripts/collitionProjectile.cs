@@ -7,6 +7,7 @@ public class collitionProjectile : MonoBehaviour
     // Start is called before the first frame update
 
     public PlayerMovemnte playerMovemnte;
+    public GameObject explosion;
     void Start()
     {
 
@@ -24,6 +25,10 @@ public class collitionProjectile : MonoBehaviour
         {
             Destroy(gameObject);
             playerMovemnte.playerHp -= 10;
+            Vector3 offset = new Vector3(col.contacts[0].point.x*2, 0,2);
+            Vector3 spawnPoint = col.contacts[0].point + offset;
+            var exploObj = Instantiate(explosion, spawnPoint, Quaternion.identity) as GameObject;
+            Destroy(exploObj, 2);
             print("Player hit");
 
         }

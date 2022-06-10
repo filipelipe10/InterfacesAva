@@ -111,6 +111,20 @@
             },
             "m_InputSlot": {
                 "m_Node": {
+                    "m_Id": "279b9464b89f44a6823411dc4aeeb2ae"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "2e311ba57e774d94baab175ab02d2bd3"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
                     "m_Id": "7c3f50dd5bbf469fbe5a856dbeb089ac"
                 },
                 "m_SlotId": 1
@@ -767,7 +781,7 @@
         "m_Id": "74a85ccb5e4d455d90de1758310e313e"
     },
     "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 1,
+    "m_SurfaceType": 0,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,

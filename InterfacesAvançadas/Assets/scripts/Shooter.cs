@@ -7,11 +7,14 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     public float timer = 3;
     private float time;
+    private float timerPre = 2.7f;
+    private float timePre;
 
     public Transform firePoint;
     public Transform destination;
     public GameObject muzzle;
     public GameObject projectile;
+    public GameObject preMuzzle;
     public float projectileSpeed = 30;
     public float waitTimer = 5;
     private float waitTime;
@@ -21,6 +24,7 @@ public class Shooter : MonoBehaviour
     {
         time = timer;
         waitTime = waitTimer;
+        timePre = timerPre;
     }
 
     // Update is called once per frame
@@ -30,7 +34,6 @@ public class Shooter : MonoBehaviour
 
         if (playerMovemnte.playerDead == false)
         {
-            print("js");
             if (waitTime > 0)
             {
                 waitTime -= Time.deltaTime;
@@ -40,27 +43,44 @@ public class Shooter : MonoBehaviour
                 if (time > 0)
                 {
                     time -= Time.deltaTime;
+                    if (timePre > 0)
+                    {
+                        timePre -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        var preMuz = Instantiate(preMuzzle, firePoint.position, Quaternion.identity) as GameObject;
+                        timePre = time+1; //valor ao calhas
+
+                    }
                 }
                 else
                 {
+
                     if (timer > 0.5f)
                     {
                         timer *= 0.95f;
+                        timerPre *= 0.95f;
                     }
+                   
 
                     time = timer;
-
+                    timePre = timerPre;
 
                     instanciateProjectile(firePoint);
                 }
 
+
+
+
             }
+
         }
+
         else
         {
             waitTime = waitTimer;
             time = timer;
-            print(waitTimer);
         }
 
 

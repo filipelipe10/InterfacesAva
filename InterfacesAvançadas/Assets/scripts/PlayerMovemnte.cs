@@ -11,8 +11,8 @@ public class PlayerMovemnte : MonoBehaviour
     public float speed = 0.2f;
     CharacterController player;
     public TextMeshProUGUI textHp;
-    public int playerHp =100;
-    public bool playerDead =true;
+    public int playerHp = 100;
+    public bool playerDead = true;
 
     void Start()
     {
@@ -28,12 +28,17 @@ public class PlayerMovemnte : MonoBehaviour
 
         textHp.text = "Player Hp: " + playerHp;
 
-        if(playerHp <= 0)
+        if (playerHp <= 0)
         {
-            playerHp = 100;
-            playerDead = true;
+            if (playerHp <= 100)
+            {
+
+
+                playerHp = 100;
+                playerDead = true;
+            }
         }
     }
 
-    
+
 }
