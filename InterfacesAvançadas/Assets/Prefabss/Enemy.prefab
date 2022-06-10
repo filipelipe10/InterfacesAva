@@ -77,12 +77,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206a6cd66cc2ee2439d2ec63ff904bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 2
+  timer: 3
   firePoint: {fileID: 7745644913620344131}
   destination: {fileID: 0}
   muzzle: {fileID: 0}
   projectile: {fileID: 0}
   projectileSpeed: 15
+  waitTime: 5
 --- !u!1001 &7745644912956835110
 PrefabInstance:
   m_ObjectHideFlags: 0
