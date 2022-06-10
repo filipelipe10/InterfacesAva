@@ -15,6 +15,7 @@ public class Shooter : MonoBehaviour
     public float projectileSpeed = 30;
     public float waitTimer = 5;
     private float waitTime;
+    public PlayerMovemnte playerMovemnte;
 
     void Start()
     {
@@ -26,32 +27,45 @@ public class Shooter : MonoBehaviour
     void Update()
     {
 
-        
 
-        if (waitTime > 0)
+        if (playerMovemnte.playerDead == false)
         {
-            waitTime -= Time.deltaTime;
-        }
-        else
-        {
-            if (time > 0)
+            print("js");
+            if (waitTime > 0)
             {
-                time -= Time.deltaTime;
+                waitTime -= Time.deltaTime;
             }
             else
             {
-                if (timer > 0.5f)
+                if (time > 0)
                 {
-                    timer *= 0.95f;
+                    time -= Time.deltaTime;
+                }
+                else
+                {
+                    if (timer > 0.5f)
+                    {
+                        timer *= 0.95f;
+                    }
+
+                    time = timer;
+
+
+                    instanciateProjectile(firePoint);
                 }
 
-                time = timer;
-
-
-                instanciateProjectile(firePoint);
             }
-
         }
+        else
+        {
+            waitTime = waitTimer;
+            time = timer;
+            print(waitTimer);
+        }
+
+
+
+
 
 
 

@@ -12,9 +12,11 @@ public class PlayerMovemnte : MonoBehaviour
     CharacterController player;
     public TextMeshProUGUI textHp;
     public int playerHp =100;
+    public bool playerDead =true;
 
     void Start()
     {
+        playerDead = true;
         player = GetComponent<CharacterController>();
     }
 
@@ -25,5 +27,13 @@ public class PlayerMovemnte : MonoBehaviour
         player.Move(move * Time.deltaTime * speed);
 
         textHp.text = "Player Hp: " + playerHp;
+
+        if(playerHp <= 0)
+        {
+            playerHp = 100;
+            playerDead = true;
+        }
     }
+
+    
 }
