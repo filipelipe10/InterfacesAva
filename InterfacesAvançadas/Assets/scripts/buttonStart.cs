@@ -8,6 +8,7 @@ public class buttonStart : MonoBehaviour
     // Start is called before the first frame update
     public PlayerMovemnte playerMovemnte;
     public Button start;
+    public GameObject motorInterface;
     void Start()
     {
         
@@ -19,10 +20,12 @@ public class buttonStart : MonoBehaviour
         if(playerMovemnte.playerDead == true)
         {
             start.gameObject.SetActive(true);
+            motorInterface.SetActive(false);
         }
         else
         {
             start.gameObject.SetActive(false);
+            motorInterface.SetActive(true);
         }
     }
 

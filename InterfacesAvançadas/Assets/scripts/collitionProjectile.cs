@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class collitionProjectile : MonoBehaviour
 {
     // Start is called before the first frame update
 
     public PlayerMovemnte playerMovemnte;
+    public interfaceVibration interfaceVibration;
     public GameObject explosion;
+  
+
+
     void Start()
     {
 
@@ -16,6 +22,7 @@ public class collitionProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
 
     }
 
@@ -37,17 +44,21 @@ public class collitionProjectile : MonoBehaviour
             float margin = 0.3f;
             if (collisionVector.x > playerPosition.x + margin)
             {
-                print("RightHit");
+                interfaceVibration.rightHit = true;
+                interfaceVibration.timeRight = interfaceVibration.vibrationDuration;
             }
             else
             {
                 if (collisionVector.x < playerPosition.x - margin)
                 {
-                    print("LeftHit");
+                    interfaceVibration.leftHit = true;
+                    interfaceVibration.timeLeft = interfaceVibration.vibrationDuration;
                 }
                 else
                 {
-                    print("CenterHit");
+                    interfaceVibration.centerHit = true;
+
+                    interfaceVibration.timeCenter = interfaceVibration.vibrationDuration;
                 }
             }
         }
