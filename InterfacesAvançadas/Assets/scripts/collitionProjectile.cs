@@ -42,10 +42,12 @@ public class collitionProjectile : MonoBehaviour
 
             Vector3 playerPosition = playerMovemnte.transform.position;
             float margin = 0.3f;
+            ArduinoController arduinoController = col.gameObject.GetComponent<ArduinoController>();
             if (collisionVector.x > playerPosition.x + margin)
             {
                 interfaceVibration.rightHit = true;
                 interfaceVibration.timeRight = interfaceVibration.vibrationDuration;
+                arduinoController.HitRight();
             }
             else
             {
@@ -53,12 +55,13 @@ public class collitionProjectile : MonoBehaviour
                 {
                     interfaceVibration.leftHit = true;
                     interfaceVibration.timeLeft = interfaceVibration.vibrationDuration;
+                    arduinoController.HitLeft();
                 }
                 else
                 {
                     interfaceVibration.centerHit = true;
-
                     interfaceVibration.timeCenter = interfaceVibration.vibrationDuration;
+                    arduinoController.HitMiddle();
                 }
             }
         }

@@ -13,18 +13,23 @@ public class ArduinoController : MonoBehaviour
     void Start()
     {
         sp = new SerialPort("COM3", 9600);
-        HitRight();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void HitRight() {
         sp.Open();
         sp.Write("hr");
+        sp.Close();
+    }
+    public void HitMiddle()
+    {
+        sp.Open();
+        sp.Write("hm");
+        sp.Close();
+    }
+    public void HitLeft()
+    {
+        sp.Open();
+        sp.Write("hl");
         sp.Close();
     }
 }
