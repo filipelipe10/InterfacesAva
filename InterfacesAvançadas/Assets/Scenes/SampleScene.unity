@@ -2253,7 +2253,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 789796646, guid: d4490175073a06e4dbc1c620ec8e10e1, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 789796647, guid: d4490175073a06e4dbc1c620ec8e10e1, type: 3}
       propertyPath: m_IsKinematic
@@ -2378,7 +2378,7 @@ PrefabInstance:
     - target: {fileID: 7745644913795272510, guid: 94609d0a3b835d646ad846ffccdd19c2,
         type: 3}
       propertyPath: projectileSpeed
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7745644913795272511, guid: 94609d0a3b835d646ad846ffccdd19c2,
         type: 3}
