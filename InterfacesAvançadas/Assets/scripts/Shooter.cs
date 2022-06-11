@@ -104,6 +104,5 @@ public class Shooter : MonoBehaviour
         Vector3 destinationRandomized = destination.position + randomDirection;
         projObj.GetComponent<Rigidbody>().velocity = (destinationRandomized - firePoint.position).normalized * projectileSpeed;
         Destroy(MuzjObj, 1);
-        print(randomY);
     }
 }
