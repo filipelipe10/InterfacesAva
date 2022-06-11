@@ -24,12 +24,14 @@ public class collitionProjectile : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
             Destroy(gameObject);
-            playerMovemnte.playerHp -= 10;
-            Vector3 offset = new Vector3(col.contacts[0].point.x*2, 0,2);
-            Vector3 spawnPoint = col.contacts[0].point + offset;
-            var exploObj = Instantiate(explosion, spawnPoint, Quaternion.identity) as GameObject;
+            var exploObj = Instantiate(explosion, col.contacts[0].point, Quaternion.identity) as GameObject; //explosao aparece à frente da camera pq o colider do character controlor esta offseted para a frente
             Destroy(exploObj, 2);
             print("Player hit");
+
+            if(playerMovemnte.playerDead == false)
+            {
+                playerMovemnte.playerHp -= 10;
+            }
 
         }
 

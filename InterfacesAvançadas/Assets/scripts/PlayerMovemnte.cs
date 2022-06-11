@@ -30,13 +30,9 @@ public class PlayerMovemnte : MonoBehaviour
 
         if (playerHp <= 0)
         {
-            if (playerHp <= 100)
-            {
+            playerHp = 100;
+            playerDead = true;
 
-
-                playerHp = 100;
-                playerDead = true;
-            }
         }
     }
 

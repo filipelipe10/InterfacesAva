@@ -135,8 +135,10 @@ GameObject:
   m_Component:
   - component: {fileID: 211728949}
   - component: {fileID: 211728948}
+  - component: {fileID: 211728950}
+  - component: {fileID: 211728951}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Wall and side colisions
   m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,6 +172,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &211728950
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211728947}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1836243, y: 4.95, z: 15}
+  m_Center: {x: 6.748474, y: -1.04, z: 9.63}
+--- !u!65 &211728951
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211728947}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1836243, y: 4.95, z: 15}
+  m_Center: {x: -7.05, y: -1.04, z: 9.63}
 --- !u!1 &217602847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,7 +1263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754103909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.22, z: -9.01}
+  m_LocalPosition: {x: 0, y: 1, z: -9.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1272,12 +1300,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 0.5
+  m_Radius: 0.78
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.05}
 --- !u!1 &1957915774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,6 +1612,11 @@ PrefabInstance:
       propertyPath: m_Lightmapping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -206254283356321021, guid: a54889a0b1026ac4d9f957f7706b75e4,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 882129737928793925, guid: a54889a0b1026ac4d9f957f7706b75e4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1663,6 +1696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lightmapping
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800325588945520740, guid: a54889a0b1026ac4d9f957f7706b75e4,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7150271390905787125, guid: a54889a0b1026ac4d9f957f7706b75e4,
         type: 3}
@@ -1753,6 +1791,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_InnerSpotAngle
       value: 72.09061
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912049515002365231, guid: a54889a0b1026ac4d9f957f7706b75e4,
+        type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a54889a0b1026ac4d9f957f7706b75e4, type: 3}
