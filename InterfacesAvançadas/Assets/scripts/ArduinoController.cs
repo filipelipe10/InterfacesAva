@@ -12,24 +12,24 @@ public class ArduinoController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sp = new SerialPort("COM3", 9600);
+        sp = new SerialPort("COM3", 19200);
     }
 
     public void HitRight() {
-        sp.Open();
-        sp.Write("hr");
-        sp.Close();
+        if (!sp.IsOpen) 
+            sp.Open();
+        sp.Write("hr:");
     }
     public void HitMiddle()
     {
-        sp.Open();
-        sp.Write("hm");
-        sp.Close();
+        if (!sp.IsOpen)
+            sp.Open();
+        sp.Write("hm:");
     }
     public void HitLeft()
     {
-        sp.Open();
-        sp.Write("hl");
-        sp.Close();
+        if (!sp.IsOpen)
+            sp.Open();
+        sp.Write("hl:");
     }
 }
