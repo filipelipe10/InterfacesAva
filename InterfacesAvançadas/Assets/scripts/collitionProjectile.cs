@@ -41,7 +41,7 @@ public class collitionProjectile : MonoBehaviour
             }
 
             Vector3 playerPosition = playerMovemnte.transform.position;
-            float margin = 0.3f;
+            float margin = 0.2f;
             ArduinoController arduinoController = col.gameObject.GetComponent<ArduinoController>();
             if (collisionVector.x > playerPosition.x + margin)
             {

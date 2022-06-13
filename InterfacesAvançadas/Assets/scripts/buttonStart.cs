@@ -9,9 +9,11 @@ public class buttonStart : MonoBehaviour
     public PlayerMovemnte playerMovemnte;
     public Button start;
     public GameObject motorInterface;
+
+    ArduinoController arduinoController;
     void Start()
     {
-        
+        arduinoController = playerMovemnte.gameObject.GetComponent<ArduinoController>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,8 @@ public class buttonStart : MonoBehaviour
     public void buttonStarst()
     {
         playerMovemnte.playerDead = false;
-
+        arduinoController.HitLeft();
+        arduinoController.HitRight();
+        arduinoController.HitMiddle();
     }
 }
